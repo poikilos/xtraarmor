@@ -1,3 +1,45 @@
+minetest.register_craftitem("xtraarmor:soap", {
+	description = "soap (for washing a dye out of a piece of dyed armor)",
+	inventory_image = "xtraarmor_soap.png",
+	groups = {flammable = 2},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:soap 5",
+	recipe = {"default:leaves", "dye:white"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:helmet_leather",
+	recipe = {"group:leather_helmet", "xtraarmor:soap"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:leggings_leather",
+	recipe = {"group:leather_leggings", "xtraarmor:soap"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:chestplate_leather",
+	recipe = {"group:leather_chestplate", "xtraarmor:soap"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:boots_leather",
+	recipe = {"group:leather_boots", "xtraarmor:soap"},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:shield_leather",
+	recipe = {"group:leather_shield", "xtraarmor:soap"},
+})
+
 
 	minetest.register_tool("xtraarmor:helmet_mese", {
 		description = "mese Helmet",
