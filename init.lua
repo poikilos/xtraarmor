@@ -157,33 +157,33 @@ minetest.register_craft({
 	minetest.register_tool("xtraarmor:helmet_leather", {
 		description = "leather cap",
 		inventory_image = "xtraarmor_inv_helmet_leather.png",
-		groups = {armor_head=7, armor_heal=0, armor_use=1000},
+		groups = {armor_head=7, armor_heal=2, armor_use=1000},
 		wear = 0,
 	})
 
 	minetest.register_tool("xtraarmor:chestplate_leather", {
 		description = "leather tunic",
 		inventory_image = "xtraarmor_inv_chestplate_leather.png",
-		groups = {armor_torso=12, armor_heal=0, armor_use=1000},
+		groups = {armor_torso=12, armor_heal=2, armor_use=1000},
 		wear = 0,
 	})
 
 	minetest.register_tool("xtraarmor:leggings_leather", {
 		description = "leather trousers",
 		inventory_image = "xtraarmor_inv_leggings_leather.png",
-		groups = {armor_legs=7, armor_heal=0, armor_use=150},
+		groups = {armor_legs=7, armor_heal=2, armor_use=150},
 		wear = 0,
 	})
 	minetest.register_tool("xtraarmor:boots_leather", {
 		description = "leather Boots",
 		inventory_image = "xtraarmor_inv_boots_leather.png",
-		groups = {armor_feet=7, armor_heal=0,physics_speed=0.15, armor_use=150},
+		groups = {armor_feet=7, armor_heal=2,physics_speed=0.15, armor_use=1000},
 		wear = 0,
 	})
 	minetest.register_tool("xtraarmor:shield_leather", {
 		description = "leather shield",
 		inventory_image = "xtraarmor_inv_shield_leather.png",
-		groups = {armor_shield=7, armor_heal=0, armor_use=150},
+		groups = {armor_shield=7, armor_heal=2, armor_use=1000},
 		wear = 0,
 	})
 
@@ -308,5 +308,65 @@ minetest.register_craft({
 		{'default:copper_ingot', 'default:copper_ingot', 'default:copper_ingot'},
 		{'', 'default:copper_ingot', ''},
 	}
+})
+
+	minetest.register_tool("xtraarmor:helmet_studded", {
+		description = "studded Helmet",
+		inventory_image = "xtraarmor_inv_helmet_studded.png",
+		groups = {armor_head=12.4, armor_heal=2, armor_use=400},
+		wear = 0,
+	})
+	minetest.register_tool("xtraarmor:chestplate_studded", {
+		description = "studded Chestplate",
+		inventory_image = "xtraarmor_inv_chestplate_studded.png",
+		groups = {armor_torso=16.4, armor_heal=2, armor_use=400},
+		wear = 0,
+	})
+	minetest.register_tool("xtraarmor:leggings_studded", {
+		description = "studded Leggings",
+		inventory_image = "xtraarmor_inv_leggings_studded.png",
+		groups = {armor_legs=16.4, armor_heal=2, armor_use=400},
+		wear = 0,
+	})
+
+	minetest.register_tool("xtraarmor:boots_studded", {
+		description = "studded Boots",
+		inventory_image = "xtraarmor_inv_boots_studded.png",
+		groups = {armor_feet=12.4, armor_heal=2, armor_use=400},
+		wear = 0,
+	})
+
+	minetest.register_tool("xtraarmor:shield_studded", {
+		description = "studded shield",
+		inventory_image = "xtraarmor_inv_shield_studded.png",
+		groups = {armor_shield=12.4, armor_heal=2, armor_use=400},
+		wear = 0,
+	})
+
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:helmet_studded",
+	recipe = {"xtraarmor:helmet_chainmail", "xtraarmor:helmet_leather"},
+})
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:chestplate_studded",
+	recipe = {"xtraarmor:chestplate_chainmail", "xtraarmor:chestplate_leather"},
+})
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:leggings_studded",
+	recipe = {"xtraarmor:leggings_chainmail", "xtraarmor:leggings_leather"},
+})
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:boots_studded",
+	recipe = {"xtraarmor:boots_chainmail", "xtraarmor:boots_leather"},
+})
+minetest.register_craft({
+	type = "shapeless",
+	output = "xtraarmor:shield_studded",
+	recipe = {"xtraarmor:shield_chainmail", "xtraarmor:shield_leather"},
 })
 
